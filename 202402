@@ -1,0 +1,25 @@
+##1.conda intall-install in miniconda3 env，crate a new env. to install STAR 
+conda create -n star_env
+conda activate star_env
+conda install -c bioconda star
+#check and record version
+STAR --verion
+version 2.7.10b 
+
+##2.wget 
+sever Internet error
+
+##3.download .tar.gz, tar and source, add in conda env.
+#STAR version releases--https://github.com/alexdobin/STAR/releases
+tar -zxvf STAR-2.7.10a.tar.gz
+cd STAR-2.7.10a
+cd source
+make STAR
+#add in conda env.
+vim ~/.bashrc 
+vi #INSERT edit
+esc 
+export PATH="/cpfs01/projects-HDD/cfff-e253a99b3378_HDD/cyj_22210880024/STAR-2.7.4a/bin/Linux_x86_64_static:"$PATH
+:wq
+source ~/.bashrc
+
